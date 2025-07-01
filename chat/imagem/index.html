@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steps com Barra antes do 1º Check</title>
+    <!-- Font Awesome para os ícones -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        div#content {
+            width: 100%;
+            max-width: 600px;
+            min-height: 100vh;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img.logo {
+            width: 6rem;
+            margin: 0px;
+        }
+
+        /* Container geral dos passos + barras */
+        .progress-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            align-items: baseline;
+            /* space-evenly ou space-around para distribuir igualmente */
+            justify-content: space-evenly;
+            padding: 0 4px;
+            box-sizing: border-box;
+            margin: 20px 0; /* espaçamento externo opcional */
+        }
+
+        /* Cada passo (o círculo e o texto embaixo) */
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .progress-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Cada barra */
+        .progress-bar {
+            width: 40px;     /* Ajuste conforme seu layout */
+            height: 4px;     /* Espessura da barra */
+            border-radius: 4px;
+            background: #B6B6B6;
+            margin: 0 8px;   /* Espaço horizontal para separar de outros itens */
+        }
+
+        /* Círculo com check */
+        .check-container {
+            width: 40px;
+            height: 40px;
+            background-color: #B6B6B6;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            transition: background-color 0.5s ease;
+        }
+
+        /* Quando o step estiver "ativo", pinta o círculo de roxo */
+        .step.active .check-container {
+            background-color: #8a4af3;
+        }
+
+        .check-container i {
+            font-size: 20px;
+        }
+
+        /* Título de cada passo */
+        p[id^="text"] {
+            margin: 5px 0 0 0;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* Seção de mais informações ao final */
+        section#more-information {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            opacity: 0;
+            transition: opacity 2s ease-out;
+        }
+
+        section#more-information.visible {
+            opacity: 1;
+        }
+
+        .copy-container {
+            text-align: center;
+        }
+
+        .copy-container .user-name {
+            font-weight: 700;
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .copy-container .subtitle {
+            margin-top: 0;
+            font-size: 12px;
+        }
+
+        .copy-container .amount {
+            margin: 10px 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #69A00D;
+            opacity: 0;
+            transform: translateY(-40px);
+            transition: all 1s ease-in-out;
+        }
+
+        .copy-container .amount.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .copy-container .final-text {
+            width: 14rem;
+            font-size: 12px;
+            line-height: 22px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <img src="images/nu.svg" alt="Logo NU" class="logo">
+
+    <!-- Container de Progresso -->
+    <div class="progress-container">
+        <!-- Barra ANTES do primeiro círculo -->
+        <div class="progress-bar" id="bar0" style="background: linear-gradient(to right, rgb(138, 74, 243) 37.5%, rgb(182, 182, 182) 37.5%);"></div>
+
+        <!-- Step 1 -->
+        <div class="step" id="step1">
+            <div class="progress-item">
+                <div class="check-container"><i class="fas fa-check"></i></div>
+            </div>
+            <p id="text1">Solicitando Aprovação</p>
+        </div>
+
+        <!-- Barra entre Step 1 e Step 2 -->
+        <div class="progress-bar" id="bar1"></div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+            <div class="progress-item">
+                <div class="check-container"><i class="fas fa-check"></i></div>
+            </div>
+            <p id="text2">Analisando Dados</p>
+        </div>
+
+        <!-- Barra entre Step 2 e Step 3 -->
+        <div class="progress-bar" id="bar2"></div>
+
+        <!-- Step 3 -->
+        <div class="step" id="step3">
+            <div class="progress-item">
+                <div class="check-container"><i class="fas fa-check"></i></div>
+            </div>
+            <p id="text3">Indenização Aprovada</p>
+        </div>
+    </div>
+
+    <!-- Informações finais -->
+    <section id="more-information">
+        <div class="copy-container">
+            <p class="user-name" id="user-name">{{nome}}</p>
+            <p class="subtitle">Sua indenização no valor de</p>
+            <p class="amount" id="amount-value">R$ 0,00</p>
+            <p class="final-text">
+                Este valor está reservado para você. Complete os próximos
+                passos para receber sua indenização ainda hoje.
+            </p>
+        </div>
+    </section>
+</div>
+
+<script>
+    // Pega parâmetros de URL, se quiser usar ?name=Fulano
+    function getSearchParam(key) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(key) || '';
+    }
+
+    // Anima "preenchimento" de cada barra
+    function animateBar(barId, duration, callback) {
+        const bar = document.getElementById(barId);
+        if (!bar) return;
+        let startTime = null;
+
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+            const percentage = Math.min(progress / duration, 1);
+
+            bar.style.background = `linear-gradient(to right, #8a4af3 ${100 * percentage}%, #B6B6B6 ${100 * percentage}%)`;
+
+            if (progress < duration) {
+                window.requestAnimationFrame(step);
+            } else {
+                // Finaliza a barra toda roxa
+                bar.style.background = '#8a4af3';
+                if (callback) callback();
+            }
+        }
+
+        window.requestAnimationFrame(step);
+    }
+
+    // Ativa o círculo (fica roxo)
+    function activateStep(stepEl) {
+        stepEl.classList.add('active');
+    }
+
+    // Mostra o valor gradualmente
+    function showAmountWithAnimation() {
+        const amountEl = document.getElementById('amount-value');
+        const finalAmount = 'R$ 7.854,63';
+        let currentText = '';
+        let index = 0;
+
+        amountEl.textContent = '';
+        amountEl.classList.add('visible');
+
+        const interval = setInterval(() => {
+            if (index < finalAmount.length) {
+                currentText += finalAmount[index];
+                amountEl.textContent = currentText;
+                index++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 100);
+    }
+
+    // Mostra a seção final (com um delay)
+    function showCopy(delay) {
+        setTimeout(() => {
+            document.getElementById('more-information').classList.add('visible');
+            showAmountWithAnimation();
+        }, delay);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Ajusta nome via querystring se quiser
+        const name = getSearchParam('name') || 'Visitante';
+        document.getElementById('user-name').textContent = name
+            .split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+
+        // Seletores dos steps
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        const step3 = document.getElementById('step3');
+
+        // 1) Anima barra0 e, em seguida, ativa step1
+        animateBar('bar0', 2000, () => {
+            activateStep(step1);
+
+            // 2) Anima barra1, depois ativa step2
+            animateBar('bar1', 2000, () => {
+                activateStep(step2);
+
+                // 3) Anima barra2, depois ativa step3
+                animateBar('bar2', 2000, () => {
+                    activateStep(step3);
+
+                    // Por fim, mostra a info final
+                    showCopy(1000);
+                });
+            });
+        });
+    });
+</script>
+
+
+</body></html>
